@@ -124,7 +124,7 @@ const start = () => {
 };
 
 // START Countdown
-addEventListener("click", start());
+addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
@@ -132,7 +132,7 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
 
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
